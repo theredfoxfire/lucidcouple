@@ -41,3 +41,20 @@ body {
 	background-color:#FAF8F8;
 	border-radius: 6px;
 }
+
+.apanel-body:hover, .apanel-body:focus{
+	background-color: #F4F1F2 !important;
+}
+.right{
+	text-align: right !important;
+}
+.a-act{
+	margin-right:16px;
+}
+.tooltip.top .tooltip-inner {
+    background-color:#BFBFBF;
+    width: 128px;
+}
+.tooltip.top .tooltip-arrow {
+      border-top-color: #BFBFBF;
+}
