@@ -43,7 +43,7 @@ body {
 }
 
 .apanel-body:hover, .apanel-body:focus{
-	background-color: #F4F1F2 !important;
+	background-color: #FBFBFB !important;
 }
 .right{
 	text-align: right !important;
@@ -52,9 +52,21 @@ body {
 	margin-right:16px;
 }
 .tooltip.top .tooltip-inner {
-    background-color:#BFBFBF;
+    background-color:#8F8888;
     width: 128px;
 }
 .tooltip.top .tooltip-arrow {
-      border-top-color: #BFBFBF;
+      border-top-color: #8F8888;
+}
+.c-black{
+	color:#150B0B;
+}
+.btn-feel{
+	width:88px;
+}
+.f-feel{
+	color: #333;
+}
+.p-border{
+	border-top: 1px solid #e5ced8;
 }
