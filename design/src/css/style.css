@@ -16,7 +16,13 @@ body {
 
 .centered{
 	padding-top: 10px;
-	}
+}
+.name-center{
+	text-align: center;
+	padding-top:0px;
+	height: 52px;
+	
+}
 
 /* Set the fixed height of the footer here */
 #footer {
