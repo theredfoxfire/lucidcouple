@@ -19,6 +19,10 @@ class CreateUsersTable extends Migration {
 	        $table->string('username', 50);
 	        $table->string('email', 300);
 	        $table->string('password', 100);
+	        $table->date('birthday', 100);
+	        $table->boolean('gender');
+	        $table->integer('height');
+	        $table->integer('weight');
 	        $table->string('remember_token', 100)->nullable();
 	        $table->timestamps();
 	    });

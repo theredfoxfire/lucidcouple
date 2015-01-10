@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'BarangController' => $baseDir . '/app/controllers/BarangController.php',
     'BaseController' => $baseDir . '/app/controllers/BaseController.php',
     'Boris\\Boris' => $vendorDir . '/d11wtq/boris/lib/Boris/Boris.php',
     'Boris\\CLIOptionsHandler' => $vendorDir . '/d11wtq/boris/lib/Boris/CLIOptionsHandler.php',
@@ -28,7 +29,7 @@ return array(
     'ClassPreloader\\Parser\\DirVisitor' => $vendorDir . '/classpreloader/classpreloader/src/ClassPreloader/Parser/DirVisitor.php',
     'ClassPreloader\\Parser\\FileVisitor' => $vendorDir . '/classpreloader/classpreloader/src/ClassPreloader/Parser/FileVisitor.php',
     'ClassPreloader\\Parser\\NodeTraverser' => $vendorDir . '/classpreloader/classpreloader/src/ClassPreloader/Parser/NodeTraverser.php',
-    'CreateUsersTable' => $baseDir . '/app/database/migrations/2014_12_25_070917_create_users_table.php',
+    'CreateBooksTable' => $baseDir . '/app/database/migrations/2014_11_06_083509_create_books_table.php',
     'Crypt_AES' => $vendorDir . '/phpseclib/phpseclib/phpseclib/Crypt/AES.php',
     'Crypt_Base' => $vendorDir . '/phpseclib/phpseclib/phpseclib/Crypt/Base.php',
     'Crypt_Blowfish' => $vendorDir . '/phpseclib/phpseclib/phpseclib/Crypt/Blowfish.php',
@@ -40,7 +41,6 @@ return array(
     'Crypt_Rijndael' => $vendorDir . '/phpseclib/phpseclib/phpseclib/Crypt/Rijndael.php',
     'Crypt_TripleDES' => $vendorDir . '/phpseclib/phpseclib/phpseclib/Crypt/TripleDES.php',
     'Crypt_Twofish' => $vendorDir . '/phpseclib/phpseclib/phpseclib/Crypt/Twofish.php',
-    'DashboardController' => $baseDir . '/app/controllers/DashboardController.php',
     'DatabaseSeeder' => $baseDir . '/app/database/seeds/DatabaseSeeder.php',
     'File_ANSI' => $vendorDir . '/phpseclib/phpseclib/phpseclib/File/ANSI.php',
     'File_ASN1' => $vendorDir . '/phpseclib/phpseclib/phpseclib/File/ASN1.php',
@@ -1133,7 +1133,6 @@ return array(
     'Symfony\\Component\\Filesystem\\Exception\\IOException' => $vendorDir . '/symfony/filesystem/Symfony/Component/Filesystem/Exception/IOException.php',
     'Symfony\\Component\\Filesystem\\Exception\\IOExceptionInterface' => $vendorDir . '/symfony/filesystem/Symfony/Component/Filesystem/Exception/IOExceptionInterface.php',
     'Symfony\\Component\\Filesystem\\Filesystem' => $vendorDir . '/symfony/filesystem/Symfony/Component/Filesystem/Filesystem.php',
-    'Symfony\\Component\\Filesystem\\LockHandler' => $vendorDir . '/symfony/filesystem/Symfony/Component/Filesystem/LockHandler.php',
     'Symfony\\Component\\Filesystem\\Tests\\FilesystemTestCase' => $vendorDir . '/symfony/filesystem/Symfony/Component/Filesystem/Tests/FilesystemTestCase.php',
     'Symfony\\Component\\Finder\\Adapter\\AbstractAdapter' => $vendorDir . '/symfony/finder/Symfony/Component/Finder/Adapter/AbstractAdapter.php',
     'Symfony\\Component\\Finder\\Adapter\\AbstractFindAdapter' => $vendorDir . '/symfony/finder/Symfony/Component/Finder/Adapter/AbstractFindAdapter.php',
@@ -1288,7 +1287,6 @@ return array(
     'Symfony\\Component\\HttpKernel\\EventListener\\ProfilerListener' => $vendorDir . '/symfony/http-kernel/Symfony/Component/HttpKernel/EventListener/ProfilerListener.php',
     'Symfony\\Component\\HttpKernel\\EventListener\\ResponseListener' => $vendorDir . '/symfony/http-kernel/Symfony/Component/HttpKernel/EventListener/ResponseListener.php',
     'Symfony\\Component\\HttpKernel\\EventListener\\RouterListener' => $vendorDir . '/symfony/http-kernel/Symfony/Component/HttpKernel/EventListener/RouterListener.php',
-    'Symfony\\Component\\HttpKernel\\EventListener\\SaveSessionListener' => $vendorDir . '/symfony/http-kernel/Symfony/Component/HttpKernel/EventListener/SaveSessionListener.php',
     'Symfony\\Component\\HttpKernel\\EventListener\\SessionListener' => $vendorDir . '/symfony/http-kernel/Symfony/Component/HttpKernel/EventListener/SessionListener.php',
     'Symfony\\Component\\HttpKernel\\EventListener\\StreamedResponseListener' => $vendorDir . '/symfony/http-kernel/Symfony/Component/HttpKernel/EventListener/StreamedResponseListener.php',
     'Symfony\\Component\\HttpKernel\\EventListener\\TestSessionListener' => $vendorDir . '/symfony/http-kernel/Symfony/Component/HttpKernel/EventListener/TestSessionListener.php',

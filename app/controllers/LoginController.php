@@ -2,52 +2,47 @@
 
 class LoginController extends BaseController {
 
-	/*
-	|--------------------------------------------------------------------------
-	| Default Home Controller
-	|--------------------------------------------------------------------------
-	|
-	| You may wish to use controllers instead of, or in addition to, Closure
-	| based routes. That's great! Here is an example controller method to
-	| get you started. To route to this controller, just add the route:
-	|
-	|	Route::get('/', 'HomeController@showWelcome');
-	|
-	*/
-
+	/**
+	 * Display a listing of the resource.
+	 *
+	 * @return Response
+	 */
 	public function index()
 	{
-		return View::make('admin/login/login');
+		$input = Input::all();
+		$credentials = array(
+                            'username' => $input['username'],
+                            'password' => $input['password']
+                            );
+            if (Auth::attempt($credentials, true)) {
+                return Redirect::to('/');
+            }
+            return Redirect::to('/')->withErrors('Login Gagal');
+
 	}
 
-	public function doLogin()
-    {
-        $rules = array(
-            		'email'    => 'required|email',
-                    'password' => 'required|alphaNum|min:5'
-        );
-        $validator = Validator::make(Input::all(), $rules);
-        if ($validator->fails()) {
-            return Redirect::to('login')
-                ->withErrors($validator)
-                ->withInput(Input::except('password'));
-        } else {
-            $userdata = array(
-            	'email'   => Input::get('email'),
-                'password'          => Input::get('password')
-                );
-        			if (Auth::attempt($userdata)) {
-                        return Redirect::to('/');
-                    } else {               
-                        return Redirect::to('login');
-                    }
-        }
-    }
- 
-    public function logout()
-    {
-        Auth::logout();
-        return Redirect::to('login');
-    }
+	public function register(){
+		$input = Input::all();
+
+		$validator = Validator::make($input, User::$rules);
+		if($validator->fails()){
+			return Redirect::to('/')->withErrors($validator);
+		}else{
+			$user = new User();
+			$simpan = $user->register($input);
+			if($simpan == true){
+				return Redirect::to('/');
+			}else{
+				return Redirect::to('/')->withErrors('Username Sudah Ada');
+			}
+		}
+	}
+
+	public function logout(){
+		$id = Auth::user()->id_user;
+        Auth::logout($id);
+
+        return Redirect::to('/');
+	}
 
 }
